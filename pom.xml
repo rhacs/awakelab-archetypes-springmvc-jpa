@@ -18,6 +18,18 @@
         </license>
     </licenses>
 
+    <developers>
+        <developer>
+            <email>ra.hermosillac@gmail.com</email>
+            <id>rhacs</id>
+            <name>Ricardo A. Hermosilla Carrillo</name>
+            <organization>Independent</organization>
+            <organizationUrl>https://github.com/rhacs</organizationUrl>
+            <timezone>America/Santiago</timezone>
+            <url>https://github.com/rhacs</url>
+        </developer>
+    </developers>
+
     <build>
         <extensions>
             <extension>
