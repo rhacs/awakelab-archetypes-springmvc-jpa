@@ -21,12 +21,15 @@ public class HomeController {
      *
      * @return un objeto {@link String} con la respuesta a la solicitud
      */
-    @GetMapping
+    @GetMapping(path = { "/", "/{nombre}" })
     public String paginaInicio(@PathVariable Optional<String> nombre, Model modelo) {
         // Verificar si el parámetro ingresado por url está presente
         if (nombre.isPresent()) {
             // Agregar nombre al modelo
-            modelo.addAttribute("nombre", nombre.get()/ ) ;
+            modelo.addAttribute("nombre", nombre.get());
+
+            // Mostrar página
+            return "home2";
         }
 
         // Mostrar página
