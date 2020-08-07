@@ -6,7 +6,7 @@
     <!-- Información del Proyecto -->
     <groupId>awakelab-archetypes-springmvc-jpa</groupId>
     <artifactId>awakelab-archetypes-springmvc-jpa</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <!-- Nombre y Descripción del proyecto -->
