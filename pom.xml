@@ -87,6 +87,8 @@
     </profiles>
 
     <build>
+        <finalName>${project.artifactId}-${project.version}</finalName>
+
         <extensions>
             <extension>
                 <groupId>org.apache.maven.archetype</groupId>
