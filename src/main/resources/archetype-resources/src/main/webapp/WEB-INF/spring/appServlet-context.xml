@@ -32,6 +32,6 @@
         Escanéa el Classpath en búsqueda de anotaciones como @Component, @Repository, @Service,
         @Controller, etc.
     -->
-    <context:component-scan base-package="${package}" />
+    <context:component-scan base-package="$package" />
 
 </beans:beans>
