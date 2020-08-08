@@ -5,9 +5,6 @@
         <!-- Carpeta donde se trabajarán los archivos de depuración -->
         <Property name="ruta">/${groupId}-logs/${artifactId}</Property>
 
-        <!-- Nombre del archivo donde se guardarán los mensajes -->
-        <Property name="archivo">application</Property>
-
         <!-- Patrón del mensaje -->
         <Property name="patron">[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}</Property>
     </Properties>
@@ -15,14 +12,14 @@
     <!-- Appenders -->
     <Appenders>
         <!-- Consola -->
-        <Console name="logConsola" target="SYSTEM_OUT">
+        <Console name="consola" target="SYSTEM_OUT">
             <!-- Patrón del mensaje, definido en Properties > pattern -->
             <PatternLayout pattern="${patron}" />
         </Console>
 
-        <!-- Archivo -->
-        <RollingFile name="logArchivo" fileName="${ruta}/${archivo}.log"
-            filePattern="${ruta}/${archivo}_%d{yyyy-MM-dd}.log">
+        <!-- Archivo: Aplicación -->
+        <RollingFile name="logAplicacion" fileName="${ruta}/aplicacion.log"
+            filePattern="${ruta}/aplicacion_%d{yyyy-MM-dd}.log">
 
             <!-- Patrón del mensaje, definido en Properties > pattern -->
             <PatternLayout pattern="${patron}" />
@@ -36,6 +33,26 @@
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />
             </Policies>
         </RollingFile>
+
+        <!-- Archivo: Spring Framework -->
+        <RollingFile name="logFramework" fileName="${ruta}/spring-framework.log"
+            filePattern="${ruta}/spring-framework_%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${patron}" />
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+
+        <!-- Archivo: Errores -->
+        <RollingFile name="logError" fileName="${ruta}/error.log"
+            filePattern="${ruta}/error_%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="${patron}" />
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
     </Appenders>
 
     <!-- Loggers -->
@@ -43,19 +60,20 @@
         <!-- Aplicación -->
         <!-- additivity="false" permite deshacerse de los logs duplicados -->
         <Logger name="$package" level="debug" additivity="false">
-            <AppenderRef ref="logArchivo" />
-            <AppenderRef ref="logConsola" />
+            <AppenderRef ref="consola" />
+            <AppenderRef ref="logAplicacion" />
         </Logger>
 
         <!-- Spring Framework -->
         <Logger name="org.springframework" level="error" additivity="false">
-            <AppenderRef ref="logConsola" />
+            <AppenderRef ref="consola" />
+            <AppenderRef ref="logFramework" />
         </Logger>
 
         <!-- Raíz -->
         <Root level="error" additivity="false">
-            <AppenderRef ref="logConsola" />
-            <AppenderRef ref="logArchivo" />
+            <AppenderRef ref="consola" />
+            <AppenderRef ref="logError" />
         </Root>
     </Loggers>
 
