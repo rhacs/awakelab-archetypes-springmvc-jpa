@@ -1,4 +1,4 @@
-package $package;
+package $controladores;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -24,12 +24,28 @@ class HomeControllerTest {
 
     @Test
     void paginaInicioDeberiaDevolverTextoGenerico() throws Exception {
-        mvc.perform(get("/")).andDo(print()).andExpect(status().isOk()).andExpect(view().name("home"));
+        mvc
+                // Simular una petición GET
+                .perform(get("/"))
+                // Imprimir resultado en consola
+                .andDo(print())
+                // Esperar que el estado de la respuesta sea HttpStatus.OK
+                .andExpect(status().isOk())
+                // Esperar que la vista devuelta "home" como se especificó en el controlador
+                .andExpect(view().name("home"));
     }
 
     @Test
     void paginaInicioDeberiaDevolverTextoPersonalizado() throws Exception {
-        mvc.perform(get("/{nombre}", "Nombre")).andDo(print()).andExpect(status().isOk())
+        mvc
+                // Simular una petición GET
+                .perform(get("/{nombre}", "Nombre"))
+                // Imprimir resultado en consola
+                .andDo(print())
+                // Esperar que el estado de la respuesta sea HttpStatus.OK
+                .andExpect(status().isOk())
+                // Esperar que la vista devuelta sea "home2" como se especificó en el
+                // controlador
                 .andExpect(view().name("home2"));
     }
 
