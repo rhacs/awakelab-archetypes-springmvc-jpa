@@ -39,6 +39,9 @@
         <!-- Jackson -->
         <com.fasterxml.jackson.core-version>2.11.2</com.fasterxml.jackson.core-version>
 
+        <!-- Jayway JsonPath -->
+        <com.jayway.jsonpath-version>2.4.0</com.jayway.jsonpath-version>
+
         <!-- Apache Log4j -->
         <org.apache.logging.log4j-version>2.13.3</org.apache.logging.log4j-version>
 
@@ -148,6 +151,14 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-library</artifactId>
             <version>${org.hamcrest-version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Project :json Path Assert > https://mvnrepository.com/artifact/com.jayway.jsonpath/json-path-assert -->
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path-assert</artifactId>
+            <version>${com.jayway.jsonpath-version}</version>
             <scope>test</scope>
         </dependency>
 
