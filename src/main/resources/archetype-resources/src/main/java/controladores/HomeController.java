@@ -1,4 +1,4 @@
-package $controladores;
+package ${package}.controladores;
 
 import java.util.Optional;
 
