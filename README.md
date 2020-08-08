@@ -13,7 +13,7 @@ $ mvn clean install
 ```
 
 ## Uso
-Una vez instalado el arquetipo, se puede generar el proyecto utilizando la consola como se indica a continuación o a través del asistente de creación de proyectos de tu IDE favorito
+Una vez instalado el arquetipo, se puede generar el proyecto utilizando la consola como se indica a continuación o a través del asistente de creación de proyectos de tu IDE favorito. **Importante**: Recuerda habilitar el checkbox que permite ver los arquetipos marcados como *SNAPSHOT*
 
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
