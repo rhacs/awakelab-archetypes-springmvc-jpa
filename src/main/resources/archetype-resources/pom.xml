@@ -113,6 +113,13 @@
             <version>${com.fasterxml.jackson.core-version}</version>
         </dependency>
 
+        <!-- Jackson Datatype: JSR310 > https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jsr310 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${com.fasterxml.jackson.core-version}</version>
+        </dependency>
+
         <!-- Apache Log4j Core > https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
