@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <!-- Propiedades globales -->
+    <Properties>
+        <!-- Carpeta donde se trabajarán los archivos de depuración -->
+        <Property name="logPath">target/logs</Property>
+
+        <!-- Nombre del archivo donde se guardarán los mensajes -->
+        <Property name="rollingFileName">application</Property>
+
+        <!-- Patrón del mensaje -->
+        <Property name="pattern">[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() -
+            %msg%n%throwable{short.lineNumber}</Property>
+    </Properties>
+
+    <!-- Appenders -->
+    <Appenders>
+        <!-- Consola -->
+        <Console name="console" target="SYSTEM_OUT">
+            <!-- Patrón del mensaje, definido en Properties > pattern -->
+            <PatternLayout pattern="${pattern}" />
+        </Console>
+
+        <!-- Archivo -->
+        <RollingFile name="rollingFile" fileName="${logPath}/${rollingFileName}.log"
+            filePattern="${logPath}/${rollingFileName}_%d{yyyy-MM-dd}.log">
+
+            <!-- Patrón del mensaje, definido en Properties > pattern -->
+            <PatternLayout pattern="${pattern}" />
+
+            <!-- Políticas de generación de archivos -->
+            <Policies>
+                <!-- Causes a rollover if the log file is older than the current JVM's start time -->
+                <OnStartupTriggeringPolicy />
+                <!-- Causes a rollover once the date/time pattern no longer applies to the active file -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <!-- Loggers -->
+    <Loggers>
+        <Root level="DEBUG" additivity="false">
+            <AppenderRef ref="console" />
+            <AppenderRef ref="rollingFile" />
+        </Root>
+    </Loggers>
+
+</Configuration>
