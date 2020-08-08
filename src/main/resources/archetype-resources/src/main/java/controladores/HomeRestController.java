@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.rhacs.testeame.modelos.RespuestaAPI;
+import ${package}.modelos.RespuestaAPI;
 
 @RestController
 @RequestMapping(path = "/api", produces = MediaType.APPLICATION_JSON_VALUE)
