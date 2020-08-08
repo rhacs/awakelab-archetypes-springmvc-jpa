@@ -32,4 +32,18 @@
         </fileSet>
     </fileSets>
 
+    <requiredProperties>
+        <requiredProperty key="controladores">
+            <defaultValue>${groupId}.${artifactId}.controladores</defaultValue>
+        </requiredProperty>
+
+        <requiredProperty key="modelos">
+            <defaultValue>${groupId}.${artifactId}.modelos</defaultValue>
+        </requiredProperty>
+
+        <requiredProperty key="repositorios">
+            <defaultValue>${groupId}.${artifactId}.repositorios</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
 </archetype-descriptor>
