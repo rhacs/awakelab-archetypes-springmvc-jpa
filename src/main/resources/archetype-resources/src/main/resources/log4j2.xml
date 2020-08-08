@@ -3,35 +3,35 @@
     <!-- Propiedades globales -->
     <Properties>
         <!-- Carpeta donde se trabajarán los archivos de depuración -->
-        <Property name="logPath">target/logs</Property>
+        <Property name="ruta">/${groupId}-logs/${artifactId}</Property>
 
         <!-- Nombre del archivo donde se guardarán los mensajes -->
-        <Property name="rollingFileName">application</Property>
+        <Property name="archivo">application</Property>
 
         <!-- Patrón del mensaje -->
-        <Property name="pattern">[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() -
-            %msg%n%throwable{short.lineNumber}</Property>
+        <Property name="patron">[%highlight{%-5level}] %d{DEFAULT} %c{1}.%M() - %msg%n%throwable{short.lineNumber}</Property>
     </Properties>
 
     <!-- Appenders -->
     <Appenders>
         <!-- Consola -->
-        <Console name="console" target="SYSTEM_OUT">
+        <Console name="logConsola" target="SYSTEM_OUT">
             <!-- Patrón del mensaje, definido en Properties > pattern -->
-            <PatternLayout pattern="${pattern}" />
+            <PatternLayout pattern="${patron}" />
         </Console>
 
         <!-- Archivo -->
-        <RollingFile name="rollingFile" fileName="${logPath}/${rollingFileName}.log"
-            filePattern="${logPath}/${rollingFileName}_%d{yyyy-MM-dd}.log">
+        <RollingFile name="logArchivo" fileName="${ruta}/${archivo}.log"
+            filePattern="${ruta}/${archivo}_%d{yyyy-MM-dd}.log">
 
             <!-- Patrón del mensaje, definido en Properties > pattern -->
-            <PatternLayout pattern="${pattern}" />
+            <PatternLayout pattern="${patron}" />
 
             <!-- Políticas de generación de archivos -->
             <Policies>
                 <!-- Causes a rollover if the log file is older than the current JVM's start time -->
                 <OnStartupTriggeringPolicy />
+
                 <!-- Causes a rollover once the date/time pattern no longer applies to the active file -->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true" />
             </Policies>
@@ -40,9 +40,22 @@
 
     <!-- Loggers -->
     <Loggers>
-        <Root level="DEBUG" additivity="false">
-            <AppenderRef ref="console" />
-            <AppenderRef ref="rollingFile" />
+        <!-- Aplicación -->
+        <!-- additivity="false" permite deshacerse de los logs duplicados -->
+        <Logger name="$package" level="debug" additivity="false">
+            <AppenderRef ref="logArchivo" />
+            <AppenderRef ref="logConsola" />
+        </Logger>
+
+        <!-- Spring Framework -->
+        <Logger name="org.springframework" level="error" additivity="false">
+            <AppenderRef ref="logConsola" />
+        </Logger>
+
+        <!-- Raíz -->
+        <Root level="error" additivity="false">
+            <AppenderRef ref="logConsola" />
+            <AppenderRef ref="logArchivo" />
         </Root>
     </Loggers>
 
