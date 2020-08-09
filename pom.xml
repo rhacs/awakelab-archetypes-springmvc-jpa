@@ -3,7 +3,7 @@
 
     <groupId>io.github.rhacs</groupId>
     <artifactId>awakelab-archetypes-springmvc-jpa</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.6-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>${project.groupId}:${project.artifactId}</name>
