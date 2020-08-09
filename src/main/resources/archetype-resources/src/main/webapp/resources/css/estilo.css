@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body {
+    padding: 1rem;
+}
+
 h1 {
     color: blue;
     margin-bottom: 0.25rem;
