@@ -32,7 +32,7 @@ class HomeRestControllerTest {
                 // Esperar que el contenido devuelto sea un JSON
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 // Esperar a que el json contenga un atributo "method" con el valor "verMensaje"
-                .andExpect(jsonPath("$.method").value("verMensaje"));
+                .andExpect(jsonPath(".method").value("mostrarMensaje"));
     }
 
     @Test
@@ -48,7 +48,7 @@ class HomeRestControllerTest {
                 // Esperar a que el contenido devuelto sea un JSON
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 // Esperar a que el json contenga un elemento "message" con el valor "Hola, Awaker!"
-                .andExpect(jsonPath("$.message").value("Hola, " + nombre + "!"));
+                .andExpect(jsonPath(".message").value("Hola, " + nombre + "!"));
     }
 
 }
