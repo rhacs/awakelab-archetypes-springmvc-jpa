@@ -18,7 +18,7 @@ Una vez instalado el arquetipo, se puede generar el proyecto utilizando la conso
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.4-SNAPSHOT \
+        -DarchetypeVersion=1.0.7-SNAPSHOT \
         -DgroupId=<GroupId de tu Proyecto> \
         -DartifactId=<ArtifactId de tu Proyecto>
 ```
@@ -34,7 +34,7 @@ Un ejemplo más concreto:
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.4-SNAPSHOT \
+        -DarchetypeVersion=1.0.7-SNAPSHOT \
         -DgroupId=io.github.rhacs \
         -DartifactId=prueba
 ```
