@@ -36,12 +36,12 @@ public class HomeRestController {
      * @return un objeto {@link ResponseEntity} con la respuesta a la solicitud
      */
     @GetMapping
-    public ResponseEntity<RespuestaAPI> verMensaje(HttpServletRequest request) {
+    public ResponseEntity<RespuestaAPI> mostrarMensaje(HttpServletRequest request) {
         // Depuración
         logger.info("[API] Solicitud GET: {}", request.getRequestURI());
 
         // Crear respuesta
-        RespuestaAPI respuesta = new RespuestaAPI("verMensaje", HttpStatus.OK, "Hola Mundo!");
+        RespuestaAPI respuesta = new RespuestaAPI(HttpStatus.OK, "mostrarMensaje", "Hola Mundo!");
 
         // Devolver respuesta
         return ResponseEntity.status(HttpStatus.OK).body(respuesta);
@@ -56,12 +56,13 @@ public class HomeRestController {
      * @return un objeto {@link ResponseEntity} con la respuesta a la solicitud
      */
     @GetMapping(path = "/{nombre}")
-    public ResponseEntity<RespuestaAPI> verMensajePersonalizado(@PathVariable String nombre, HttpServletRequest request) {
+    public ResponseEntity<RespuestaAPI> mostrarMensajePersonalizado(@PathVariable String nombre, HttpServletRequest request) {
         // Depuración
         logger.info("[API] Solicitud GET: {}", request.getRequestURI());
 
         // Crear respuesta
-        RespuestaAPI respuesta = new RespuestaAPI("verMensajePersonalizado", HttpStatus.OK, "Hola, " + nombre + "!");
+        RespuestaAPI respuesta = new RespuestaAPI(HttpStatus.OK, "mostrarMensajePersonalizado",
+                "Hola, " + nombre + "!");
 
         // Devolver respuesta
         return ResponseEntity.status(HttpStatus.OK).body(respuesta);
