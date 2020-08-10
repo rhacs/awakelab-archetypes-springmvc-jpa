@@ -40,6 +40,9 @@
         <!-- Hibernate Validator Engine -->
         <org.hibernate.validator-version>6.1.5.Final</org.hibernate.validator-version>
 
+        <!-- Bean Validation API -->
+        <javax.validation-version>2.0.1.Final</javax.validation-version>
+
         <!-- Jackson -->
         <com.fasterxml.jackson.core-version>2.11.2</com.fasterxml.jackson.core-version>
 
@@ -111,6 +114,13 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${org.hibernate.validator-version}</version>
+        </dependency>
+
+        <!-- Bean Validation API > https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${javax.validation-version}</version>
         </dependency>
 
         <!-- Oracle JDBC -->
