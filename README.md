@@ -3,22 +3,13 @@
 # awakelab-archetypes-springmvc-jpa
 Arquetipo para la creación de proyectos bajo Spring Framework MVC y Java Persistence API (JPA) con implementaciones básicas.
 
-## Instalación
-Lo primero es clonar el repositorio y luego efectuar la instalación a través de maven
-
-```bash
-$ git clone https://github.com/rhacs/awakelab-archetypes-springmvc-jpa.git
-$ cd awakelab-archetypes-springmvc-jpa
-$ mvn clean install
-```
-
 ## Uso
-Una vez instalado el arquetipo, se puede generar el proyecto utilizando la consola como se indica a continuación o a través del asistente de creación de proyectos de tu IDE favorito. **Importante**: Recuerda habilitar el checkbox que permite ver los arquetipos marcados como *SNAPSHOT*
+El arquetipo se encuentra disponible en Maven Central, por lo que sólo es necesario seleccionarlo desde el asistente de creación de proyectos maven de tu IDE favorito o a través de la consola como se muestra a continuación
 
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.7-SNAPSHOT \
+        -DarchetypeVersion=1.0.6 \
         -DgroupId=<GroupId de tu Proyecto> \
         -DartifactId=<ArtifactId de tu Proyecto>
 ```
@@ -34,7 +25,7 @@ Un ejemplo más concreto:
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.7-SNAPSHOT \
+        -DarchetypeVersion=1.0.6 \
         -DgroupId=io.github.rhacs \
         -DartifactId=prueba
 ```
