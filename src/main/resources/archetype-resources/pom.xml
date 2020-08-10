@@ -37,6 +37,9 @@
         <!-- Hibernate -->
         <org.hibernate-version>5.4.19.Final</org.hibernate-version>
 
+        <!-- Hibernate Validator Engine -->
+        <org.hibernate.validator-version>6.1.5.Final</org.hibernate.validator-version>
+
         <!-- Jackson -->
         <com.fasterxml.jackson.core-version>2.11.2</com.fasterxml.jackson.core-version>
 
@@ -101,6 +104,13 @@
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${org.hibernate-version}</version>
+        </dependency>
+
+        <!-- Hibernate Validator Engine > https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${org.hibernate.validator-version}</version>
         </dependency>
 
         <!-- Oracle JDBC -->
