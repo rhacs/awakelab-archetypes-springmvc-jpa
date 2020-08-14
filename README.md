@@ -33,3 +33,13 @@ $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
 ## Licencia
 Este proyecto se encuentra liberado bajo la licencia [GNU GPL-3.0](https://opensource.org/licenses/GPL-3.0)
 
+
+## Historial de Versiones
+
+1.0.9 - Agosto 14, 2020
+ * Agregado el .gitignore por defecto
+ * Actualizadas las versiones de Hibernate (5.4.19.FINAL -> 5.4.20.FINAL) y Spring Data JPA (2.3.2.RELEASE -> 2.3.3.RELEASE)
+
+1.0.8 - Agosto 10, 2020
+ * Corregido error: Se agregó un `component-scan` faltante al `root-context.xml`
+
