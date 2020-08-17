@@ -9,7 +9,7 @@ El arquetipo se encuentra disponible en Maven Central, por lo que sólo es neces
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.8 \
+        -DarchetypeVersion=1.0.9 \
         -DgroupId=<GroupId de tu Proyecto> \
         -DartifactId=<ArtifactId de tu Proyecto>
 ```
@@ -25,7 +25,7 @@ Un ejemplo más concreto:
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.8 \
+        -DarchetypeVersion=1.0.9 \
         -DgroupId=io.github.rhacs \
         -DartifactId=prueba
 ```
