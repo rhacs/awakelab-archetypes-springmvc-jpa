@@ -9,7 +9,7 @@ El arquetipo se encuentra disponible en Maven Central, por lo que sólo es neces
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.9 \
+        -DarchetypeVersion=1.0.10 \
         -DgroupId=<GroupId de tu Proyecto> \
         -DartifactId=<ArtifactId de tu Proyecto>
 ```
@@ -25,7 +25,7 @@ Un ejemplo más concreto:
 ```bash
 $ mvn archetype:generate -DarchetypeGroupId=io.github.rhacs \
         -DarchetypeArtifactId=awakelab-archetypes-springmvc-jpa \
-        -DarchetypeVersion=1.0.9 \
+        -DarchetypeVersion=1.0.10 \
         -DgroupId=io.github.rhacs \
         -DartifactId=prueba
 ```
@@ -35,6 +35,11 @@ Este proyecto se encuentra liberado bajo la licencia [GNU GPL-3.0](https://opens
 
 
 ## Historial de Versiones
+
+1.0.10 - Agosto 27, 2020
+ * Removida la propiedad de configuración `hibernate.hbm2ddl.auto` del archivo `root-context.xml` debido a que causaba confusión
+ * Actualizada la descripción del arquetipo
+ * Agregado el plugin `maven-resources-plugin` para forzar la inclusión de `.gitignore` en el proyecto generado
 
 1.0.9 - Agosto 14, 2020
  * Agregado el .gitignore por defecto
