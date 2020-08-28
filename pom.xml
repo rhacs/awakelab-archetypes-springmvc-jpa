@@ -8,7 +8,7 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/rhacs/awakelab-archetypes-springmvc-jpa</url>
-    <description>Arquetipo para la creación de proyectos bajo Spring Framework MVC y Java Persistence API (JPA) con implementaciones básicas. Incluye: Spring Framework 5.2.8, Spring Data 2.3.2, Hibernate 5.4.19, Java Servlet API 4.0.1, JSP API 2.3.3, JSTL API 1.2, JUnit 5.6.2</description>
+    <description>Arquetipo para la creación de proyectos bajo Spring Framework MVC y Java Persistence API (JPA) con implementaciones básicas. Incluye: Spring Framework 5.2.8.RELEASE, Spring Data 2.3.3.RELEASE, Hibernate 5.4.20.FINAL, Java Servlet API 4.0.1, JSP API 2.3.3, JSTL API 1.2, JUnit 5.6.2</description>
 
     <licenses>
         <license>
