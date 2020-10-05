@@ -38,7 +38,7 @@
         <org.hibernate-version>5.4.21.Final</org.hibernate-version>
 
         <!-- Hibernate Validator Engine -->
-        <org.hibernate.validator-version>6.1.5.Final</org.hibernate.validator-version>
+        <org.hibernate.validator-version>6.1.6.Final</org.hibernate.validator-version>
 
         <!-- Bean Validation API -->
         <javax.validation-version>2.0.1.Final</javax.validation-version>
