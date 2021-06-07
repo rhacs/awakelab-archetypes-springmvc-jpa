@@ -35,7 +35,7 @@
         <org.springframework.data-version>2.5.1</org.springframework.data-version>
 
         <!-- Hibernate -->
-        <org.hibernate-version>5.4.32.Final</org.hibernate-version>
+        <org.hibernate-version>5.5.0.Final</org.hibernate-version>
 
         <!-- Hibernate Validator Engine -->
         <org.hibernate.validator-version>7.0.1.Final</org.hibernate.validator-version>
